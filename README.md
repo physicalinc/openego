@@ -51,7 +51,7 @@ All datasets are processed to include:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/openego.git
+git clone https://github.com/ahadjawaid/openego.git
 cd openego
 
 # Install the package
