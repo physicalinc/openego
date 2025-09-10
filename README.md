@@ -297,10 +297,6 @@ pytest --cov=openego
 pytest tests/test_openego_provider.py
 ```
 
-### CI/CD
-
-This repository uses GitHub Actions to run tests on every push and pull request to ensure code quality. Tests are run on Python 3.8 and 3.10 on Ubuntu.
-
 ## License
 
 OpenEgo inherits licenses from its constituent datasets. Please refer to the individual dataset licenses in the `licenses/` directory and see `ATTRIBUTION.md` for detailed attribution information
