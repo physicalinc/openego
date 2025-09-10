@@ -1,0 +1,56 @@
+{
+  "task": "Picking up and moving various objects on a table.",
+  "actions": [
+    {
+      "start_timestamp": 1.0,
+      "end_timestamp": 3.6,
+      "objects": [
+        "Tazo green tea carton"
+      ],
+      "actors": [
+        "left_hand"
+      ],
+      "label": "left hand grasps, lifts, and then places the Tazo green tea carton back on the table"
+    },
+    {
+      "start_timestamp": 6.9,
+      "end_timestamp": 9.8,
+      "objects": [
+        "white remote control"
+      ],
+      "actors": [
+        "left_hand"
+      ],
+      "label": "left hand grasps, lifts, and then places the white remote control back on the table"
+    },
+    {
+      "start_timestamp": 11.8,
+      "end_timestamp": 14.5,
+      "objects": [
+        "white shoe"
+      ],
+      "actors": [
+        "left_hand"
+      ],
+      "label": "left hand grasps, lifts, and then places a white shoe back on the table"
+    },
+    {
+      "start_timestamp": 18.5,
+      "end_timestamp": 21.0,
+      "objects": [
+        "white shoe"
+      ],
+      "actors": [
+        "left_hand"
+      ],
+      "label": "left hand grasps, lifts, and then places the other white shoe back on the table"
+    }
+  ],
+  "video_info": {
+    "num_frames": 676,
+    "fps": 30,
+    "width": 1280,
+    "height": 720,
+    "duration": 22.533333333333335
+  }
+}
