@@ -299,7 +299,11 @@ pytest tests/test_openego_provider.py
 
 ## License
 
-OpenEgo inherits licenses from its constituent datasets. Please refer to the individual dataset licenses in the `licenses/` directory and see `ATTRIBUTION.md` for detailed attribution information
+The OpenEgo codebase is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+The datasets included in OpenEgo retain their original licenses. Please refer to:
+- Individual dataset licenses in the `licenses/` directory
+- Detailed attribution in [ATTRIBUTION.md](ATTRIBUTION.md)
 
 
 ## Applications
