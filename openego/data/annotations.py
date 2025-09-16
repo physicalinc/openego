@@ -101,12 +101,6 @@ class Action:
         import sys
 
         frames = self.frames
-        if self.joints is not None:
-            from hlp.visualization.visualizer import HandVisualizer
-            viz = HandVisualizer()
-            frames = [viz.visualize_frame(frame, self.left_hand_pixel_joints[i], self.right_hand_pixel_joints[i]) 
-                     for i, frame in enumerate(frames)]
-
         with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmpfile:
             imageio.mimsave(tmpfile.name, frames, fps=self.fps)
             print(f"Label: '{self.label}'")
