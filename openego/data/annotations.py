@@ -1,7 +1,7 @@
 from ast import Tuple
 from ..core.projection import convert_points_to_trajetory_coordinates
 from ..core.utils import get_video_frames
-from typing import List, Optional, Mapping, Any. Tuple
+from typing import List, Optional, Mapping, Any, Tuple
 from dataclasses import dataclass
 from pathlib import Path
 import numpy as np
@@ -28,7 +28,7 @@ class Action:
         return d
 
     @property
-    def resolution(self) -> Tuple[int, int]
+    def resolution(self) -> Tuple[int, int]:
         return self.height, self.width
 
     @property
