@@ -17,6 +17,7 @@ class OpenEgoDataProvider:
         assert data_dir.exists(), f"Data directory does not exist: {data_dir}"
         self.data_types = data_types
         self.video_paths = [p for p in get_sorted_paths(self.data_dir, "*.mp4") if not p.name.startswith(".")]
+        self.video_name_to_index = { str(path.relative_to(data_dir).parent) : i for i, path in enumerate(self.video_paths) }
         self._video_benchmarks = [get_benchmark_name(video_path) for video_path in self.video_paths]
         self.benchmarks = sorted(list(set(self._video_benchmarks)))
         self._video_infos = [get_video_info(video_path) for video_path in self.video_paths]
@@ -54,6 +55,9 @@ class OpenEgoDataProvider:
             data['rgb'] = self._load_rgb(video_path, demo_slice)
         
         return data
+
+    def get_item_from_demo_name(self, video_name: str) -> int:
+        return self.__getitem__(self.video_name_to_index[video_name])
 
     def _load_rgb(self, video_path: Path, demo_slice: Optional[slice] = None):
         return get_video_frames(video_path, demo_slice)
