@@ -102,7 +102,7 @@ class Action:
 
         frames = self.frames
         with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmpfile:
-            imageio.mimsave(tmpfile.name, frames, fps=self.fps)
+            imageio.mimsave(tmpfile.name, frames, fps=float(self.fps))
             print(f"Label: '{self.label}'")
             try:
                 from IPython.display import display, Video
