@@ -23,6 +23,10 @@ class Action:
         d.pop('video_joints')
         d['joints'] = self.joints
         return d
+
+    @property
+    def duration(self) -> float:
+        return self.end_timestamp - self.start_timestamp
     
     @property
     def start_frame(self) -> int:
