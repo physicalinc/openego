@@ -1,6 +1,6 @@
 from ..core.utils import get_sorted_paths, get_video_info, get_video_frames, load_json, get_hdf5_data
 from ..core.constants import MANO_JOINT_NAMES, EGODEX_JOINT_NAMES
-from typing import List, Mapping, Optional, Any
+from typing import List, Mapping, Optional, Any, Union
 from pathlib import Path
 import numpy as np
 import h5py
@@ -55,8 +55,11 @@ class OpenEgoDataProvider:
             data['rgb'] = self._load_rgb(video_path, demo_slice)
         
         return data
-
-    def get_item_from_demo_name(self, video_name: str) -> int:
+    
+    def get_item_from_demo_name(self, video_name: Union[str, List[str]]) -> int:
+        if isinstance(video_name, List):
+            return [self.get_item_from_demo_name(name) for name in video_name]  
+  
         return self.__getitem__(self.video_name_to_index[video_name])
 
     def _load_rgb(self, video_path: Path, demo_slice: Optional[slice] = None):
