@@ -28,6 +28,10 @@ class Action:
         return d
 
     @property
+    def num_frames(self) -> int:
+        return self.end_frame - self.start_frame
+
+    @property
     def resolution(self) -> Tuple[int, int]:
         return self.height, self.width
 
